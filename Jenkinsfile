@@ -10,7 +10,7 @@ pipeline {
 
         stage('Build Docker Image') {
             steps {
-                sh 'docker build -t python-crud-api:latest .'
+                sh 'docker build -t python-crud-api:latest -t python-crud-api:$GIT_COMMIT .'
             }
         }
 
